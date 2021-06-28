@@ -1,0 +1,33 @@
+#%RAML 1.0
+title: processapi
+
+/processapi:
+  post:
+    body:
+      application/json:
+        example:
+           {
+             "studentName": "vamsi",
+             "studentId": 1,
+             "mobileNumber": +914769,
+             "location": "hyd",
+             "height": 5.8,
+             "weight": 78,
+             "companyName": "tcl",
+             "companyId": 100,
+             "companyLocation": "bng",
+             "siblings": "sister and brother",
+             "email": "@gmail.com"
+           }
+    responses:
+        200:
+          body:
+            application/json:
+              example:
+                {"message": "successfully created"}
+        400:
+           body:
+            application/json:
+              example:
+                {"message": "not found"}
+                                
